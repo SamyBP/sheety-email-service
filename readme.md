@@ -57,7 +57,6 @@ Enable the following APIs:
    ```
 4. Grant **Editor** permissions
 
----
 
 ### 3. Google Apps Script Setup
 
@@ -112,6 +111,9 @@ project/
 fastapi run main.py
 ```
 
+> **Tip**
+>
+> Swagger is accessible at http://localhost:8000/docs
 
 ## Conceptual Architecture
 
