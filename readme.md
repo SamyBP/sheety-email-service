@@ -111,8 +111,7 @@ project/
 fastapi run main.py
 ```
 
-> **Tip**
->
+> [!NOTE]
 > Swagger is accessible at http://localhost:8000/docs
 
 ## Conceptual Architecture
