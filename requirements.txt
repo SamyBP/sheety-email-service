@@ -1,3 +1,4 @@
 fastapi[standard]
 gspread 
 google-auth
+python-dotenv

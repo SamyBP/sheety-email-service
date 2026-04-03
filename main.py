@@ -1,11 +1,14 @@
 from datetime import datetime
+import os
 from typing import Any, Optional
 import uuid
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import gspread
 from google.oauth2.service_account import Credentials
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class EmailRequest(BaseModel):
     to: str
@@ -111,8 +114,8 @@ class EmailService:
 app = FastAPI()
 
 config = GSpreadConf(
-    spreadheet_name="SheetyEmailService",
-    worksheet_name="DISI_2026",
+    spreadheet_name=os.getenv("SPREADSHEET_NAME", "SheetyEmailService"),
+    worksheet_name=os.getenv("WORKSHEET_NAME", "DISI_2026"),
     credentials_file="credentials.json",
 )
 
